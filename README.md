@@ -1,6 +1,6 @@
 # Gpi3 scripts
 
-> Gpi3 is the third generation of my xboxdrv scripts for Gpi.  It is work in progress.  The previous Gip and Gip2 were based on the D-pad mode of Select+UP (factory mode).  I've now reached the conclusion that the factory mode is dumb.  This one will be based on D-pad being in mode AXIS (Select+Left).  I'm going through and pruning all un-needed scripts, pairing it down to just the essentials.
+> Gpi3 is the third generation of my xboxdrv scripts for Gpi.  It is work in progress.  The previous Gpi and Gpi2 were based on the D-pad mode of Select+UP (factory mode).  I've now reached the conclusion that the factory mode is dumb.  This one will be based on D-pad being in mode AXIS (Select+Left).  I'm going through and pruning all un-needed scripts, pairing it down to just the essentials.
 
 These xboxdrv controller scripts greatly enhance the capabilities of your Gpi Case.  They can provide many virtual buttons using a button as a modifier.  (In effect, it can turn the six button control scheme into a 12 button one!)  It also helps by mapping controls to keyboard keys for emulators that lack the ability to interface with the Gpi case controls (some of the standalone non-libretro cores).
 
