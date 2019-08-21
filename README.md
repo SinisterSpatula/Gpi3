@@ -53,7 +53,7 @@ You also need to have xboxdrv installed (if it isn't already).  [See the Guide h
         <path>./GPi-Tools/control_updater_menu.sh</path>
         <name>control_updater_menu</name>
         <desc>Xboxdrv - Advanced Framework Updater by Adam.</desc>
-        <image>./RetroPie/retropiemenu/icons/ControllerTools-White.png</image>
+        <image>./RetroPie/retropiemenu/icons/gpitools.png</image>
         <playcount>3</playcount>
         <lastplayed>20190809T040420</lastplayed>
     </game>
