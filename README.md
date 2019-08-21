@@ -34,8 +34,8 @@ You also need to have xboxdrv installed (if it isn't already).  [See the Guide h
 * If you have suggestions for improving these control maps, please [add your comments or questions here.](https://github.com/SinisterSpatula/Gpi3/issues/)
 
 ## Icons for ES Themes:
-[https://github.com/SinisterSpatula/Gpi3/blob/master/ControllerTools-White.png]( https://github.com/SinisterSpatula/Gpi3/blob/master/ControllerTools-White.png)
-[https://github.com/SinisterSpatula/Gpi3/blob/master/ControllerTools-Black.png](https://github.com/SinisterSpatula/Gpi3/blob/master/ControllerTools-Black.png)
+[https://github.com/SinisterSpatula/Gpi3/blob/master/gpitools.png]( https://github.com/SinisterSpatula/Gpi3/blob/master/gpitools.png)
+
 
 `/opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml`
 
@@ -44,7 +44,7 @@ You also need to have xboxdrv installed (if it isn't already).  [See the Guide h
         <path>./GPi-Tools</path>
         <name>Gpi-Tools</name>
         <desc>Various Tools for the Gpi</desc>
-        <image>./RetroPie/retropiemenu/icons/ControllerTools-White.png</image>
+        <image>./RetroPie/retropiemenu/icons/gpitools.png</image>
         <playcount>1</playcount>
         <lastplayed>20190819T061038</lastplayed>
     </game>
