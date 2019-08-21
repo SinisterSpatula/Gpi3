@@ -70,6 +70,7 @@ cd ~/RetroPie/retropiemenu/Gpi-Tools
 sudo wget -O control_updater_menu.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi3/master/control_updater_menu.sh
 sudo chmod 775 control_updater_menu.sh
 sudo rm ~/RetroPie/retropiemenu/control_updater_menu.sh
+sudo rm ~/RetroPie/retropiemenu/migrate-controllertools.sh
 echo "-------------------------------------"
 echo "|Migrated to new Controls Framework.|"
 echo "|  Please restart emulation station |"
