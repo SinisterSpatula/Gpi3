@@ -52,6 +52,9 @@ cannonball="--ui-buttonmap back+start=KEY_ESC"
 #Scummvm Standalone - select+start=quit, select+LB=Load State, select+RB=Save State.  Select send N for No.  Start sends Y for Yes.
 scummvm="--ui-buttonmap start=KEY_Y,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q,back+lb=KEY_LEFTCTRL+KEY_0,back+rb=KEY_LEFTALT+KEY_0"
 
+#Streets of Rage remake
+sorr="--ui-buttonmap back+start=KEY_ESC" 
+
 
 fourway="--four-way-restrictor"
 invert="--ui-buttonmap du=KEY_DOWN,dd=KEY_UP"
@@ -74,6 +77,12 @@ case $2 in
 	scummvm)
 		$xboxkill
 		joycommand="$basicGPI $nograb $scummvm &"
+		eval $joycommand
+	;;
+	
+	sorr)
+		$xboxkill
+		joycommand="$basicGPI $nograb $sorr &"
 		eval $joycommand
 	;;
 esac
