@@ -56,7 +56,7 @@ scummvm="--ui-buttonmap start=KEY_Y,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q,bac
 sorr="--ui-buttonmap back+start=KEY_ESC"
 
 #Openbor 3400
-openbor="back+start=KEY_F10"
+openbor="--ui-buttonmap back+start=KEY_F10"
 
 
 
