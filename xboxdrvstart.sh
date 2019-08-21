@@ -53,7 +53,11 @@ cannonball="--ui-buttonmap back+start=KEY_ESC"
 scummvm="--ui-buttonmap start=KEY_Y,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q,back+lb=KEY_LEFTCTRL+KEY_0,back+rb=KEY_LEFTALT+KEY_0"
 
 #Streets of Rage remake
-sorr="--ui-buttonmap back+start=KEY_ESC" 
+sorr="--ui-buttonmap back+start=KEY_ESC"
+
+#Openbor 3400
+openbor="back+start=KEY_F10"
+
 
 
 fourway="--four-way-restrictor"
@@ -83,6 +87,12 @@ case $2 in
 	sorr)
 		$xboxkill
 		joycommand="$basicGPI $nograb $sorr &"
+		eval $joycommand
+	;;
+	
+		openbor)
+		$xboxkill
+		joycommand="$basicGPI $nograb $openbor &"
 		eval $joycommand
 	;;
 esac
