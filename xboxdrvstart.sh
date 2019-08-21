@@ -50,7 +50,7 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 cannonball="--ui-buttonmap back+start=KEY_ESC"
 
 #Scummvm Standalone
-scummvm="--ui-buttonmap start=KEY_Y,back=KEY_N,back+start=KEY_ESC"
+scummvm="--ui-buttonmap start=KEY_Y,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q"
 
 
 fourway="--four-way-restrictor"
