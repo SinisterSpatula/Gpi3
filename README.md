@@ -42,7 +42,7 @@ You also need to have xboxdrv installed (if it isn't already).  [See the Guide h
 ```
     <game>
         <path>./GPi-Tools</path>
-        <name>Gpi-Tools</name>
+        <name>GPi-Tools</name>
         <desc>Various Tools for the Gpi</desc>
         <image>./RetroPie/retropiemenu/icons/gpitools.png</image>
         <playcount>1</playcount>
