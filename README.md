@@ -41,8 +41,8 @@ You also need to have xboxdrv installed (if it isn't already).  [See the Guide h
 
 ```
     <game>
-        <path>./Controllertools</path>
-        <name>Controllertools</name>
+        <path>./GPi-Tools</path>
+        <name>Gpi-Tools</name>
         <desc>Xboxdrv - Advanced Framework Updater by Adam.</desc>
         <image>./RetroPie/retropiemenu/icons/ControllerTools-White.png</image>
         <playcount>1</playcount>
@@ -50,7 +50,7 @@ You also need to have xboxdrv installed (if it isn't already).  [See the Guide h
     </game>
 
     <game>
-        <path>./Controllertools/control_updater_menu.sh</path>
+        <path>./GPi-Tools/control_updater_menu.sh</path>
         <name>control_updater_menu</name>
         <image>./RetroPie/retropiemenu/icons/ControllerTools-White.png</image>
         <playcount>3</playcount>
