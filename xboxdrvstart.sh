@@ -49,6 +49,8 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 #Outrun Engine
 cannonball="--ui-buttonmap back+start=KEY_ESC"
 
+#Scummvm Standalone
+scummvm="--ui-buttonmap start=KEY_Y,back=KEY_N,back+start=KEY_ESC"
 
 
 fourway="--four-way-restrictor"
@@ -69,4 +71,9 @@ case $2 in
 		eval $joycommand
 	;;
 
+	scummvm)
+		$xboxkill
+		joycommand="$basicGPI $nograb $scummvm &"
+		eval $joycommand
+	;;
 esac
