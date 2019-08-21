@@ -25,7 +25,7 @@ rom="${3##*/}"
 echo "rom is "$rom >> /dev/shm/runcommand.log
 
 
-### Set variables for your joypad and emulator
+### This no longer has dpad as button, use $dpad to add it as needed.
 ### Basic Configuraions - Standard controller mappings 
 basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
     --evdev $joystick \
@@ -46,15 +46,27 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 ### Extended Configurations
 ### Specific emulator configuration or any other parameters you will need only for some emulators
 
+#Outrun Engine
+cannonball="--ui-buttonmap back+start=KEY_ESC"
+
 
 
 fourway="--four-way-restrictor"
-
 invert="--ui-buttonmap du=KEY_DOWN,dd=KEY_UP"
-
 dpad="--dpad-as-button"
+nograb="--evdev-no-grab"
 
 ### Kill Command
 xboxkill="sudo killall xboxdrv > /dev/null 2>&1"
 
+### Execute the driver with the configuration you need
+# $2 is the name of the core
+case $2 in
 
+	cannonball)
+		$xboxkill
+		joycommand="$basicGPI $nograb $cannonball &"
+		eval $joycommand
+	;;
+
+esac
