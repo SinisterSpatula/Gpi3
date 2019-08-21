@@ -46,11 +46,11 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 ### Extended Configurations
 ### Specific emulator configuration or any other parameters you will need only for some emulators
 
-#Outrun Engine
+#Outrun Engine - select+start=quit.
 cannonball="--ui-buttonmap back+start=KEY_ESC"
 
-#Scummvm Standalone
-scummvm="--ui-buttonmap start=KEY_Y,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q"
+#Scummvm Standalone - select+start=quit, select+LB=Load State, select+RB=Save State.  Select send N for No.  Start sends Y for Yes.
+scummvm="--ui-buttonmap start=KEY_Y,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q,back+lb=KEY_LEFTCTRL+KEY_0,back+rb=KEY_LEFTALT+KEY_0"
 
 
 fourway="--four-way-restrictor"
