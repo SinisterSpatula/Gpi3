@@ -74,7 +74,7 @@ sudo rm ~/RetroPie/retropiemenu/migrate-controllertools.sh
 echo "-------------------------------------"
 echo "|Migrated to new Controls Framework.|"
 echo "|  Please restart emulation station |"
-echo "|  new location is Controllertools  |"
+echo "|  new location is GPi-Tools        |"
 echo "-------------------------------------"
 sleep 20s
   else
