@@ -1,3 +1,5 @@
+### Place icons in: `/home/pi/RetroPie/retropiemenu/icons`
+
 ### Edit your: `/opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml`
 
 And add
