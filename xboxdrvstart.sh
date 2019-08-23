@@ -38,7 +38,9 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
     --trigger-as-button \
     --no-extra-events \
     --evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_RX=x2,ABS_RY=y2,ABS_Z=lt,ABS_RZ=rt \
-    --evdev-keymap BTN_SOUTH=a,BTN_EAST=b,BTN_NORTH=x,BTN_WEST=y,BTN_TL=lb,BTN_TR=rb,BTN_THUMBL=tl,BTN_THUMBR=tr,BTN_MODE=guide,BTN_SELECT=back,BTN_START=start,BTN_TRIGGER_HAPPY3=du,BTN_TRIGGER_HAPPY4=dd,BTN_TRIGGER_HAPPY1=dl,BTN_TRIGGER_HAPPY2=dr \
+    --evdev-keymap BTN_SOUTH=a,BTN_EAST=b,BTN_NORTH=x,BTN_WEST=y,BTN_TL=lb,BTN_TR=rb \
+    --evdev-keymap BTN_THUMBL=tl,BTN_THUMBR=tr,BTN_MODE=guide,BTN_SELECT=back,BTN_START=start \
+    --evdev-keymap BTN_TRIGGER_HAPPY3=du,BTN_TRIGGER_HAPPY4=dd,BTN_TRIGGER_HAPPY1=dl,BTN_TRIGGER_HAPPY2=dr \
     --evdev-absmap ABS_X=dpad_x,ABS_Y=dpad_y \
     --evdev-absmap ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y"
 
@@ -49,8 +51,10 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 #Outrun Engine - select+start=quit.
 cannonball="--ui-buttonmap back+start=KEY_ESC"
 
-#Scummvm Standalone - select+start=quit, select+LB=Load State, select+RB=Save State.  Select send N for No.  Start sends Enter. Select+X=Keyboard "7"
-scummvm="--ui-buttonmap start=KEY_ENTER,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q,back+lb=KEY_LEFTCTRL+KEY_0,back+rb=KEY_LEFTALT+KEY_0,back+x=KEY_7"
+#Scummvm Standalone - select+start=quit, select+LB=Load State, select+RB=Save State.
+#Select send N for No.  Start sends Enter. Select+X=Keyboard "7"
+scummvm="--ui-buttonmap start=KEY_ENTER,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q,back+lb=KEY_LEFTCTRL+KEY_0 \
+--ui-buttonmap back+rb=KEY_LEFTALT+KEY_0,back+x=KEY_7"
 
 #Streets of Rage remake
 sorr="--ui-buttonmap back+start=KEY_ESC"
