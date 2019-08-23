@@ -62,7 +62,8 @@ sorr="--ui-buttonmap back+start=KEY_ESC"
 #Openbor 3400
 openbor="--ui-buttonmap back+start=KEY_F10,back=void,start=void,a=void,b=void,x=void,y=void,lb=void,rb=void"
 
-
+#gpsp 
+gpsp="--ui-buttonmap back+x=KEY_F10,back+start=KEY_ESC"
 
 fourway="--four-way-restrictor"
 invert="--ui-buttonmap du=KEY_DOWN,dd=KEY_UP"
@@ -99,4 +100,11 @@ case $2 in
 		joycommand="$basicGPI $nograb $openbor &"
 		eval $joycommand
 	;;
+	
+		gpsp)
+		$xboxkill
+		joycommand="$basicGPI $nograb $gpsp &"
+		eval $joycommand
+	;;
+
 esac
