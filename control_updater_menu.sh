@@ -122,9 +122,9 @@ sudo reboot
 
 function update_menu() {
 if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi3/master/control_updater_menu.sh; then
-sudo mkdir -p ~/RetroPie/retropiemenu/GPi-Tools
+sudo mkdir -p ~/RetroPie/retropiemenu/gpitools
 cd
-cd ~/RetroPie/retropiemenu/GPi-Tools
+cd ~/RetroPie/retropiemenu/gpitools
 sudo wget -O control_updater_menu.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi3/master/control_updater_menu.sh
 sudo chmod 775 control_updater_menu.sh
 sudo chmod a+x *.sh
