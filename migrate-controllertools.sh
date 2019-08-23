@@ -66,9 +66,9 @@ cd /opt/retropie/supplementary/xboxdrv/bin
 sudo wget -O quit.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi3/master/quit.sh
 sudo chmod 775 quit.sh
 sudo rm -R ~/RetroPie/retropiemenu/Controllertools
-sudo mkdir -p ~/RetroPie/retropiemenu/GPi-Tools
+sudo mkdir -p ~/RetroPie/retropiemenu/gpitools
 cd
-cd ~/RetroPie/retropiemenu/GPi-Tools
+cd ~/RetroPie/retropiemenu/gpitools
 sudo wget -O control_updater_menu.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi3/master/control_updater_menu.sh
 sudo chmod 775 control_updater_menu.sh
 sudo rm ~/RetroPie/retropiemenu/control_updater_menu.sh
