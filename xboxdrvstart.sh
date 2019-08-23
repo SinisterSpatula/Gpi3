@@ -49,9 +49,8 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 #Outrun Engine - select+start=quit.
 cannonball="--ui-buttonmap back+start=KEY_ESC"
 
-#Scummvm Standalone - select+start=quit, select+LB=Load State, select+RB=Save State.  Select send N for No.  Start sends Y for Yes.
-scummvm="--ui-buttonmap start=KEY_Y,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q,back+lb=KEY_LEFTCTRL+KEY_0,back+rb=KEY_LEFTALT+KEY_0"
-
+#Scummvm Standalone - select+start=quit, select+LB=Load State, select+RB=Save State.  Select send N for No.  Start sends Enter. Select+X=Keyboard "7"
+scummvm="--ui-buttonmap start=KEY_ENTER,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q,back+lb=KEY_LEFTCTRL+KEY_0,back+rb=KEY_LEFTALT+KEY_0,back+x=KEY_7"
 #Streets of Rage remake
 sorr="--ui-buttonmap back+start=KEY_ESC"
 
