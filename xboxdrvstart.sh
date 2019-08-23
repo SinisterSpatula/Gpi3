@@ -60,7 +60,7 @@ scummvm="--ui-buttonmap start=KEY_ENTER,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q
 sorr="--ui-buttonmap back+start=KEY_ESC"
 
 #Openbor 3400
-openbor="--ui-buttonmap back+start=KEY_F10,back=void,start=void,a=void,b=void,x=void,y=void,lb=void,rb=void"
+#openbor="--ui-buttonmap back+start=KEY_F10,back=void,start=void,a=void,b=void,x=void,y=void,lb=void,rb=void"
 
 
 
@@ -94,9 +94,9 @@ case $2 in
 		eval $joycommand
 	;;
 	
-	openbor)
-		$xboxkill
-		joycommand="$basicGPI $nograb $openbor &"
-		eval $joycommand
-	;;
+#	openbor)
+#		$xboxkill
+#		joycommand="$basicGPI $nograb $openbor &"
+#		eval $joycommand
+#	;;
 esac
