@@ -54,13 +54,13 @@ cannonball="--ui-buttonmap back+start=KEY_ESC"
 #Scummvm Standalone - select+start=quit, select+LB=Load State, select+RB=Save State.
 #Select send N for No.  Start sends Enter. Select+X=Keyboard "7"
 scummvm="--ui-buttonmap start=KEY_ENTER,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q,back+lb=KEY_LEFTCTRL+KEY_0 \
---ui-buttonmap back+rb=KEY_LEFTALT+KEY_0,back+x=KEY_7"
+	--ui-buttonmap back+rb=KEY_LEFTALT+KEY_0,back+x=KEY_7"
 
 #Streets of Rage remake
 sorr="--ui-buttonmap back+start=KEY_ESC"
 
 #Openbor 3400
-openbor="--ui-buttonmap back+start=KEY_F10"
+openbor="--ui-buttonmap back+start=KEY_F10,back=void,start=void,a=void,b=void,x=void,y=void,lb=void,rb=void"
 
 
 
@@ -94,7 +94,7 @@ case $2 in
 		eval $joycommand
 	;;
 	
-		openbor)
+	openbor)
 		$xboxkill
 		joycommand="$basicGPI $nograb $openbor &"
 		eval $joycommand
