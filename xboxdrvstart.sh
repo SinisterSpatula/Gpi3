@@ -96,7 +96,7 @@ case $2 in
 		eval $joycommand
 	;;
 	
-	openbor)
+	openbor|openbor-6xxx)
 		$xboxkill
 		joycommand="$basicGPI $nograb $openbor &"
 		eval $joycommand
