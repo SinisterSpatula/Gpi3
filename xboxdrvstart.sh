@@ -102,7 +102,7 @@ case $2 in
 		eval $joycommand
 	;;
 	
-		gpsp)
+	gpsp)
 		$xboxkill
 		joycommand="$basicGPI $nograb $gpsp &"
 		eval $joycommand
