@@ -85,7 +85,7 @@ gpsp="--ui-buttonmap back+x=KEY_F10,back+start=KEY_ESC"
 quake3="--ui-buttonmap x=rel:REL_Y:-2:5,b=rel:REL_Y:2:5,y=rel:REL_X:-3:5,a=rel:REL_X:3:5,lb=KEY_LEFTALT:KEY_C:300,rb=BTN_LEFT \
     --ui-buttonmap start=KEY_ENTER,back=KEY_TAB,lb+rb=KEY_SPACE,back+dl=KEY_LEFT,back+dr=KEY_RIGHT,back+b=KEY_1,back+x=KEY_E \
     --ui-buttonmap back+y=KEY_LEFTBRACE,back+a=KEY_RIGHTBRACE,lb+x=rel:REL_Y:-4:5,lb+b=rel:REL_Y:4:5,lb+y=rel:REL_X:-6:5 \
-    --ui-buttonmap lb+a=rel:REL_X:6:5,back+start=KEY_ESC,du=KEY_UP,dd=KEY_DOWN,dl=KEY_A,dr=KEY_D"
+    --ui-buttonmap lb+a=rel:REL_X:6:5,back+start=KEY_ESC,du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
 
 
 fourway="--four-way-restrictor"
