@@ -82,7 +82,7 @@ gpsp="--ui-buttonmap back+x=KEY_F10,back+start=KEY_ESC"
 # - SELECT then LEFT - left key (for going through the configs)
 # - SELECT then RIGHT - right key (for going through the configs)
 
-quake3="--ui-buttonmap x=rel:REL_Y:-2:5,b=rel:REL_Y:2:5,y=rel:REL_X:-3:5,a=rel:REL_X:3:5, lb=KEY_LEFTALT:KEY_C:300,rb=BTN_LEFT,start=KEY_ENTER,back=KEY_TAB \
+quake3="--ui-buttonmap x=rel:REL_Y:-2:5,b=rel:REL_Y:2:5,y=rel:REL_X:-3:5,a=rel:REL_X:3:5,lb=KEY_LEFTALT:KEY_C:300,rb=BTN_LEFT,start=KEY_ENTER,back=KEY_TAB \
     --ui-buttonmap lb+rb=KEY_SPACE,back+dl=KEY_LEFT,back+dr=KEY_RIGHT,back+b=KEY_1,back+x=KEY_E,back+y=KEY_LEFTBRACE,back+a=KEY_RIGHTBRACE,lb+x=rel:REL_Y:-4:5,lb+b=rel:REL_Y:4:5,lb+y=rel:REL_X:-6:5,lb+a=rel:REL_X:6:5,back+start=KEY_ESC \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_A,dr=KEY_D"
 
