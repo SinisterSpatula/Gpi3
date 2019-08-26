@@ -98,13 +98,12 @@ quake3="--ui-buttonmap x=rel:REL_Y:-2:5,b=rel:REL_Y:2:5,y=rel:REL_X:-3:5,a=rel:R
     --ui-buttonmap back+y=KEY_LEFTBRACE,back+a=KEY_RIGHTBRACE,lb+x=rel:REL_Y:-4:5,lb+b=rel:REL_Y:4:5,lb+y=rel:REL_X:-6:5 \
     --ui-buttonmap lb+a=rel:REL_X:6:5,back+start=KEY_ESC,du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
 
-
-fourway="--four-way-restrictor"
-invert="--ui-buttonmap du=KEY_DOWN,dd=KEY_UP"
-dpad="--dpad-as-button"
-nograb="--evdev-no-grab"
-#grab is implied unless you use nograb.  Sometimes we want to pass everything straight through.
 #every map should be using either nograb, passthrough, or a variant of passthrough if swapping buttons around.
+
+#grab is implied unless you use nograb.
+nograb="--evdev-no-grab"
+
+#Sometimes we want to pass everything straight through.
 passthrough="--buttonmap a=a,b=b,x=x,y=y,back=back,start=start,lb=lb,rb=rb \
       --axismap=X1=X1,Y1=Y1"
 
