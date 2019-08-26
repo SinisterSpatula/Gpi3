@@ -67,7 +67,7 @@ openbor="--ui-buttonmap back+start=KEY_F10,start+back=KEY_F10,back=void,start=vo
 gpsp="--ui-buttonmap back+x=KEY_F10,back+start=KEY_ESC"
 
 #pico8
-pico8="--uibuttonmap back+start=KEY_LEFTCTRL+KEY_Q"
+pico8="--ui-buttonmap back+start=KEY_LEFTCTRL+KEY_Q"
 
 
 # Tayle's Orbbotron config (quake3)
