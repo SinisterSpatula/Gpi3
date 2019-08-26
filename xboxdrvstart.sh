@@ -103,8 +103,8 @@ fourway="--four-way-restrictor"
 invert="--ui-buttonmap du=KEY_DOWN,dd=KEY_UP"
 dpad="--dpad-as-button"
 nograb="--evdev-no-grab"
-#grab is implied unless you use nograb.  If we grab, sometimes we want to pass everything straight through.
-grab="--buttonmap a=a,b=b,x=x,y=y,back=back,start=start,lb=lb,rb=rb \
+#grab is implied unless you use nograb.  Sometimes we want to pass everything straight through.
+passthrough="--buttonmap a=a,b=b,x=x,y=y,back=back,start=start,lb=lb,rb=rb \
       --axismap=X1=X1,Y1=Y1"
 
 ### Kill Command
