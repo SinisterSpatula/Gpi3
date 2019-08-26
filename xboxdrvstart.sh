@@ -66,6 +66,9 @@ openbor="--ui-buttonmap back+start=KEY_F10,start+back=KEY_F10,back=void,start=vo
 #gpsp 
 gpsp="--ui-buttonmap back+x=KEY_F10,back+start=KEY_ESC"
 
+#pico8
+pico8="--uibuttonmap back+start=KEY_LEFTCTRL+KEY_Q"
+
 
 # Tayle's Orbbotron config (quake3)
 # Basics: D-pad for movement, face buttons for freelook. More specifically, X looks up,
@@ -132,6 +135,11 @@ case $2 in
 	quake3)
 		$xboxkill
 		joycommand="$basicGPI $dpad $quake3 &"
+		eval $joycommand
+	;;
+	pico8)
+		$xboxkill
+		joycommand="$basicGPI $nograb $pico8 &"
 		eval $joycommand
 	;;
 esac
