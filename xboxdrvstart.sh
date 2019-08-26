@@ -71,10 +71,10 @@ mame4all="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC,y+lb=KEY_TAB,y+rb
 #pifba
 pifba="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
 
-#pifbacapcom alternate map for capcom fighting games
-pifbacapcom="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC \
-	--buttonmap lb=lb,rb=rb,a=a,b=b,y=y,x=x,start=start,back=back \
-	--axismap X1=X1,Y1=Y1"
+#fbacapcom alternate map for capcom fighting games
+fbacapcom="--ui-buttonmap b=KEY_LEFTSHIFT,y=KEY_LEFTCTRL,a=KEY_Z,x=KEY_LEFTALT,lb=KEY_SPACE,rb=KEY_X \
+    --ui-buttonmap start=KEY_ENTER,back=KEY_TAB,back+start=KEY_ESC \
+    --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
 
 
 
@@ -162,7 +162,7 @@ case $2 in
 		case $rom in
 			"cybots.zip"|"dstlk.zip"|"hsf2.zip"|"msh.zip"|"mshvsf.zip"|"mvsc.zip"|"nwarr.zip"|"sfa2.zip"|"sfa3.zip"|"sfa.zip"|"sfz3jr1.zip"|"sf2ce.zip"|"sf2hf.zip"|"sf2rb.zip"|"sf2.zip"|"sgemf.zip"|"ssf2t.zip"|"ssf2.zip"|"vhunt2.zip"|"vsav2.zip"|"vsav.zip"|"xmvsf.zip"|"xmcota.zip") # Configuration used only for these ROMs
 				$xboxkill
-				joycommand="$basicGPI $pifbacapcom &"
+				joycommand="$basicGPI $fbacapcom &"
 				eval $joycommand
 			;;
 			*) # Configuration for every other ROMs on this emulator
