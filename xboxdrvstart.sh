@@ -70,7 +70,7 @@ gpsp="--ui-buttonmap back+x=KEY_F10,back+start=KEY_ESC,start+back=KEY_ESC"
 pico8="--ui-buttonmap back+start=KEY_LEFTCTRL+KEY_Q,start+back=KEY_LEFTCTRL+KEY_Q"
 
 #mame4all
-mame4all="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
+mame4all="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC,y+lb=KEY_TAB,y+rb=KEY_ENTER"
 
 # Tayle's Orbbotron config (quake3)
 # Basics: D-pad for movement, face buttons for freelook. More specifically, X looks up,
