@@ -72,6 +72,10 @@ pico8="--ui-buttonmap back+start=KEY_LEFTCTRL+KEY_Q,start+back=KEY_LEFTCTRL+KEY_
 #mame4all
 mame4all="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC,y+lb=KEY_TAB,y+rb=KEY_ENTER"
 
+#pifba
+pifba="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
+
+
 # Tayle's Orbbotron config (quake3)
 # Basics: D-pad for movement, face buttons for freelook. More specifically, X looks up,
 # B looks down, Y looks left, A looks right. Oh, also the right shoulder button (RB) is
@@ -147,6 +151,11 @@ case $2 in
 	mame4all)
 		$xboxkill
 		joycommand="$basicGPI $nograb $mame4all &"
+		eval $joycommand
+	;;
+	pifba)
+		$xboxkill
+		joycommand="$basicGPI $nograb $pifba &"
 		eval $joycommand
 	;;
 esac
