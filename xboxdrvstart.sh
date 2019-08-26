@@ -134,7 +134,7 @@ case $2 in
 	
 	openbor|openbor-6xxx)
 		$xboxkill
-		joycommand="$basicGPI $nograb $openbor &"
+		joycommand="$basicGPI $passthrough $openbor &"
 		eval $joycommand
 	;;
 	
