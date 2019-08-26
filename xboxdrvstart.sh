@@ -104,6 +104,7 @@ invert="--ui-buttonmap du=KEY_DOWN,dd=KEY_UP"
 dpad="--dpad-as-button"
 nograb="--evdev-no-grab"
 #grab is implied unless you use nograb.  Sometimes we want to pass everything straight through.
+#every map should be using either nograb, passthrough, or a variant of passthrough if swapping buttons around.
 passthrough="--buttonmap a=a,b=b,x=x,y=y,back=back,start=start,lb=lb,rb=rb \
       --axismap=X1=X1,Y1=Y1"
 
