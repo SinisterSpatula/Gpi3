@@ -49,7 +49,7 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 ### Specific emulator configuration or any other parameters you will need only for some emulators
 
 #Outrun Engine - select+start=quit.
-cannonball="--ui-buttonmap back+start=KEY_ESC"
+cannonball="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
 
 #Scummvm Standalone - select+start=quit, select+LB=Load State, select+RB=Save State.
 #Select send N for No.  Start sends Enter. Select+X=Keyboard "7"
@@ -57,14 +57,14 @@ scummvm="--ui-buttonmap start=KEY_ENTER,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q
 	--ui-buttonmap back+rb=KEY_LEFTALT+KEY_0,back+x=KEY_7,start+back=KEY_LEFTCTRL+KEY_Q"
 
 #Streets of Rage remake
-sorr="--ui-buttonmap back+start=KEY_ESC"
+sorr="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
 
 #Openbor 3400
 openbor="--ui-buttonmap back+start=KEY_F10,start+back=KEY_F10,back=void,start=void \
 	--ui-buttonmap a=void,b=void,x=void,y=void,lb=void,rb=void"
 
 #gpsp 
-gpsp="--ui-buttonmap back+x=KEY_F10,back+start=KEY_ESC"
+gpsp="--ui-buttonmap back+x=KEY_F10,back+start=KEY_ESC,start+back=KEY_ESC"
 
 #pico8
 pico8="--ui-buttonmap back+start=KEY_LEFTCTRL+KEY_Q,start+back=KEY_LEFTCTRL+KEY_Q"
