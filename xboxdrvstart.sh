@@ -137,7 +137,7 @@ case $2 in
 		joycommand="$basicGPI $dpad $quake3 &"
 		eval $joycommand
 	;;
-	pico8)
+	pico8|splore)
 		$xboxkill
 		joycommand="$basicGPI $nograb $pico8 &"
 		eval $joycommand
