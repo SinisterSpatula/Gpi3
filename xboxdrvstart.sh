@@ -77,7 +77,7 @@ pifba="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
 
 #pifbacapcom alternate map for capcom fighting games
 pifbacapcom="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC \
-	--ui-buttonmap lb=BTN_TL,rb=BTN_TR,b=BTN_SOUTH,a=BTN_EAST,y=BTN_WEST,x=BTN_NORTH \
+	--ui-buttonmap lb=BTN_TL,rb=BTN_TR,a=BTN_SOUTH,b=BTN_EAST,y=BTN_WEST,x=BTN_NORTH \
 	--ui-buttonmap back=BTN_SELECT,start=BTN_START \
 	--ui-axismap X1=ABS_X1,Y1=ABS_Y1"
 
