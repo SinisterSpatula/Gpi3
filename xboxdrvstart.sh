@@ -69,6 +69,8 @@ gpsp="--ui-buttonmap back+x=KEY_F10,back+start=KEY_ESC,start+back=KEY_ESC"
 #pico8
 pico8="--ui-buttonmap back+start=KEY_LEFTCTRL+KEY_Q,start+back=KEY_LEFTCTRL+KEY_Q"
 
+#mame4all
+mame4all="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
 
 # Tayle's Orbbotron config (quake3)
 # Basics: D-pad for movement, face buttons for freelook. More specifically, X looks up,
@@ -140,6 +142,11 @@ case $2 in
 	pico8|splore)
 		$xboxkill
 		joycommand="$basicGPI $nograb $pico8 &"
+		eval $joycommand
+	;;
+	mame4all)
+		$xboxkill
+		joycommand="$basicGPI $nograb $mame4all &"
 		eval $joycommand
 	;;
 esac
