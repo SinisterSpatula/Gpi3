@@ -40,9 +40,6 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
     --evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_RX=x2,ABS_RY=y2,ABS_Z=lt,ABS_RZ=rt \
     --evdev-keymap BTN_SOUTH=a,BTN_EAST=b,BTN_NORTH=x,BTN_WEST=y,BTN_TL=lb,BTN_TR=rb \
     --evdev-keymap BTN_THUMBL=tl,BTN_THUMBR=tr,BTN_MODE=guide,BTN_SELECT=back,BTN_START=start \
-    --evdev-keymap BTN_TRIGGER_HAPPY3=du,BTN_TRIGGER_HAPPY4=dd,BTN_TRIGGER_HAPPY1=dl,BTN_TRIGGER_HAPPY2=dr \
-    --evdev-absmap ABS_X=dpad_x,ABS_Y=dpad_y \
-    --evdev-absmap ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y"
 
 
 ### Extended Configurations
@@ -60,8 +57,7 @@ scummvm="--ui-buttonmap start=KEY_ENTER,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q
 sorr="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
 
 #Openbor 3400
-openbor="--ui-buttonmap back+start=KEY_F10,start+back=KEY_F10,back=void,start=void \
-	--ui-buttonmap a=void,b=void,x=void,y=void,lb=void,rb=void"
+openbor="--ui-buttonmap back+start=KEY_F10,start+back=KEY_F10"
 
 #gpsp 
 gpsp="--ui-buttonmap back+x=KEY_F10,back+start=KEY_ESC,start+back=KEY_ESC"
@@ -77,9 +73,8 @@ pifba="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
 
 #pifbacapcom alternate map for capcom fighting games
 pifbacapcom="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC \
-	--ui-buttonmap lb=BTN_TL,rb=BTN_TR,a=BTN_SOUTH,b=BTN_EAST,y=BTN_WEST,x=BTN_NORTH \
-	--ui-buttonmap back=BTN_SELECT,start=BTN_START \
-	--ui-axismap X1=ABS_X1,Y1=ABS_Y1"
+	--buttonmap lb=lb,rb=rb,a=a,b=b,y=y,x=x \
+	--axismap X1=X1,Y1=Y1"
 
 
 
@@ -108,6 +103,9 @@ fourway="--four-way-restrictor"
 invert="--ui-buttonmap du=KEY_DOWN,dd=KEY_UP"
 dpad="--dpad-as-button"
 nograb="--evdev-no-grab"
+#grab is implied unless you use nograb.  If we grab, sometimes we want to pass everything straight through.
+grab="--buttonmap a=a,b=b,x=x,y=y,back=back,start=start,lb=lb,rb=rb \
+      --axismap=X1=X1,Y1=Y1"
 
 ### Kill Command
 xboxkill="sudo killall xboxdrv > /dev/null 2>&1"
