@@ -100,7 +100,7 @@ quake3="--ui-buttonmap x=rel:REL_Y:-2:5,b=rel:REL_Y:2:5,y=rel:REL_X:-3:5,a=rel:R
 
 #every map should be using either nograb, passthrough, or a variant of passthrough if swapping buttons around.
 
-#grab is implied unless you use nograb.
+#grab is implied unless you use nograb. grab means emulator does not see the physical pad.  nograb means it does.
 nograb="--evdev-no-grab"
 
 #Sometimes we want to pass everything straight through.
