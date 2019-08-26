@@ -75,6 +75,13 @@ mame4all="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC,y+lb=KEY_TAB,y+rb
 #pifba
 pifba="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
 
+#pifbacapcom alternate map for capcom fighting games
+pifbacapcom="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC \
+	--ui-buttonmap lb=BTN_TL,rb=BTN_TR,b=BTN_SOUTH,a=BTN_EAST,y=BTN_WEST,x=BTN_NORTH \
+	--ui-buttonmap back=BTN_SELECT,start=BTN_START \
+	--ui-axismap X1=ABS_X1,Y1=ABS_Y1"
+
+
 
 # Tayle's Orbbotron config (quake3)
 # Basics: D-pad for movement, face buttons for freelook. More specifically, X looks up,
@@ -154,8 +161,17 @@ case $2 in
 		eval $joycommand
 	;;
 	pifba)
-		$xboxkill
-		joycommand="$basicGPI $nograb $pifba &"
-		eval $joycommand
+		case $rom in
+			"cybots.zip"|"dstlk.zip"|"hsf2.zip"|"msh.zip"|"mshvsf.zip"|"mvsc.zip"|"nwarr.zip"|"sfa2.zip"|"sfa3.zip"|"sfa.zip"|"sfz3jr1.zip"|"sf2ce.zip"|"sf2hf.zip"|"sf2rb.zip"|"sf2.zip"|"sgemf.zip"|"ssf2t.zip"|"ssf2.zip"|"vhunt2.zip"|"vsav2.zip"|"vsav.zip"|"xmvsf.zip"|"xmcota.zip") # Configuration used only for these ROMs
+				$xboxkill
+				joycommand="$basicGPI $pifbacapcom &"
+				eval $joycommand
+			;;
+			*) # Configuration for every other ROMs on this emulator
+				$xboxkill
+				joycommand="$basicGPI $nograb $pifba &"
+				eval $joycommand
+			;;
+		esac
 	;;
 esac
