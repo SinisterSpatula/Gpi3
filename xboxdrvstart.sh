@@ -69,7 +69,7 @@ pico8="--ui-buttonmap back+start=KEY_LEFTCTRL+KEY_Q,start+back=KEY_LEFTCTRL+KEY_
 mame4all="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC,y+lb=KEY_TAB,y+rb=KEY_ENTER"
 
 #advmame0-94
-mame4all="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC,y+lb=KEY_TAB,y+rb=KEY_ENTER"
+#Not needed.  You should configure it's controls within it's UI, use start+select as UI Cancel.
 
 #pifba
 advmame="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
