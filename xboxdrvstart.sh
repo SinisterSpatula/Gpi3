@@ -72,11 +72,8 @@ mame4all="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC,y+lb=KEY_TAB,y+rb
 pifba="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
 
 #fbacapcom alternate map for capcom fighting games
-fbacapcom="--dpad-as-button \
-    --evdev-absmap ABS_X=dpad_x,ABS_Y=dpad_y \
-    --ui-buttonmap b=KEY_LEFTSHIFT,y=KEY_LEFTCTRL,a=KEY_Z,x=KEY_LEFTALT,lb=KEY_SPACE,rb=KEY_X \
-    --ui-buttonmap start=KEY_ENTER,back=KEY_TAB,back+start=KEY_ESC \
-    --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
+fbacapcom="--ui-buttonmap b=KEY_LEFTSHIFT,y=KEY_LEFTCTRL,a=KEY_Z,x=KEY_LEFTALT,lb=KEY_SPACE,rb=KEY_X \
+	   --ui-buttonmap start=KEY_ENTER,back=KEY_TAB,back+start=KEY_ESC"
 
 
 
@@ -108,6 +105,11 @@ nograb="--evdev-no-grab"
 #Sometimes we want to pass everything straight through.
 passthrough="--buttonmap a=a,b=b,x=x,y=y,back=back,start=start,lb=lb,rb=rb \
       --axismap=X1=X1,Y1=Y1"
+      
+#For games that need D-pad to arrow key's.
+dpad="--dpad-as-button \
+      --evdev-absmap ABS_X=dpad_x,ABS_Y=dpad_y \
+      --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
 
 ### Kill Command
 xboxkill="sudo killall xboxdrv > /dev/null 2>&1"
@@ -164,7 +166,7 @@ case $2 in
 		case $rom in
 			"cybots.zip"|"dstlk.zip"|"hsf2.zip"|"msh.zip"|"mshvsf.zip"|"mvsc.zip"|"nwarr.zip"|"sfa2.zip"|"sfa3.zip"|"sfa.zip"|"sfz3jr1.zip"|"sf2ce.zip"|"sf2hf.zip"|"sf2rb.zip"|"sf2.zip"|"sgemf.zip"|"ssf2t.zip"|"ssf2.zip"|"vhunt2.zip"|"vsav2.zip"|"vsav.zip"|"xmvsf.zip"|"xmcota.zip") # Configuration used only for these ROMs
 				$xboxkill
-				joycommand="$basicGPI $fbacapcom &"
+				joycommand="$basicGPI $dpad $fbacapcom &"
 				eval $joycommand
 			;;
 			*) # Configuration for every other ROMs on this emulator
