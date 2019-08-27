@@ -72,7 +72,7 @@ mame4all="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC,y+lb=KEY_TAB,y+rb
 #Not needed.  You should configure it's controls within it's UI, use start+select as UI Cancel.
 
 #pifba
-advmame="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
+pifba="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
 
 #fbacapcom alternate map for capcom fighting games
 fbacapcom="--ui-buttonmap b=KEY_LEFTSHIFT,y=KEY_LEFTCTRL,a=KEY_Z,x=KEY_LEFTALT,lb=KEY_SPACE,rb=KEY_X \
