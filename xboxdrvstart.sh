@@ -68,8 +68,11 @@ pico8="--ui-buttonmap back+start=KEY_LEFTCTRL+KEY_Q,start+back=KEY_LEFTCTRL+KEY_
 #mame4all
 mame4all="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC,y+lb=KEY_TAB,y+rb=KEY_ENTER"
 
+#advmame0-94
+mame4all="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC,y+lb=KEY_TAB,y+rb=KEY_ENTER"
+
 #pifba
-pifba="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
+advmame="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
 
 #fbacapcom alternate map for capcom fighting games
 fbacapcom="--ui-buttonmap b=KEY_LEFTSHIFT,y=KEY_LEFTCTRL,a=KEY_Z,x=KEY_LEFTALT,lb=KEY_SPACE,rb=KEY_X \
@@ -160,6 +163,11 @@ case $2 in
 	mame4all)
 		$xboxkill
 		joycommand="$basicGPI $nograb $mame4all &"
+		eval $joycommand
+	;;
+	advmame-0.94)
+		$xboxkill
+		joycommand="$basicGPI $nograb $advmame &"
 		eval $joycommand
 	;;
 	pifba)
