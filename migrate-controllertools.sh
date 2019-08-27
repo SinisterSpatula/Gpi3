@@ -59,6 +59,7 @@ sudo wget -O runcommand-onstart.sh https://raw.githubusercontent.com/SinisterSpa
 sudo wget -O xboxdrvstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi3/master/xboxdrvstart.sh
 sudo wget -O xboxdrvend.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi3/master/xboxdrvend.sh
 sudo chmod 644 *.sh
+sudo chown pi:pi runcommand-on*
 sudo chmod 775 xboxdrvstart.sh
 sudo chmod 775 xboxdrvend.sh
 cd
