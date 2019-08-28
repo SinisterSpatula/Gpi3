@@ -81,6 +81,8 @@ fbacapcom="--ui-buttonmap b=KEY_LEFTSHIFT,y=KEY_LEFTCTRL,a=KEY_Z,x=KEY_LEFTALT,l
 daphne="--ui-buttonmap x=KEY_LEFTSHIFT,a=KEY_LEFTALT,b=KEY_LEFTCTRL \
         --ui-buttonmap start=KEY_1,back=KEY_5,back+start=KEY_ESC"
 
+pcsx="--ui-buttonmap x=KEY_D,a=KEY_X,b=KEY_Z+KEY_ENTER,Y=KEY_S,lb=KEY_W,y+lb=KEY_E,rb=KEY_R,y+rb=KEY_T, start=KEY_V,back=KEY_C, \
+    --ui-buttonmap back+x=KEY_ESC,back+start=exec:/opt/retropie/supplementary/xboxdrv/bin/quit.sh,back+lb=KEY_F2,back+rb=KEY_F1"
 
 
 # Tayle's Orbbotron config (quake3)
@@ -171,6 +173,11 @@ case $2 in
 	daphne)
 		$xboxkill
 		joycommand="$basicGPI $dpad $daphne &"
+		eval $joycommand
+	;;
+	pcsx-rearmed)
+		$xboxkill
+		joycommand="$basicGPI $dpad $pcsx &"
 		eval $joycommand
 	;;
 	pifba)
