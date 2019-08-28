@@ -78,7 +78,7 @@ pifba="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
 fbacapcom="--ui-buttonmap b=KEY_LEFTSHIFT,y=KEY_LEFTCTRL,a=KEY_Z,x=KEY_LEFTALT,lb=KEY_SPACE,rb=KEY_X \
 	   --ui-buttonmap start=KEY_ENTER,back=KEY_TAB,back+start=KEY_ESC"
 
-daphne="--ui-buttonmap x=KEY_LEFTSHIFT,a=KEY_LEFTCTRL,b=KEY_LEFTALT \
+daphne="--ui-buttonmap x=KEY_LEFTSHIFT,a=KEY_LEFTALT,b=KEY_LEFTCTRL \
         --ui-buttonmap start=KEY_1,back=KEY_5,back+start=KEY_ESC"
 
 
