@@ -56,8 +56,9 @@ scummvm="--ui-buttonmap start=KEY_ENTER,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q
 #Streets of Rage remake
 sorr="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
 
-#Openbor 3400
-openbor="--ui-buttonmap back+start=KEY_F10,start+back=KEY_F10"
+#Openbor
+openbor="--ui-buttonmap x=void,a=KEY_D,b=KEY_A,Y=KEY_S,lb=KEY_L,rb=KEY_R \
+    --ui-buttonmap start=KEY_ENTER,back=KEY_BACKSPACE,back+start=KEY_F10,start+back=KEY_F10"
 
 #gpsp 
 gpsp="--ui-buttonmap back+x=KEY_F10,back+start=KEY_ESC,start+back=KEY_ESC"
@@ -160,7 +161,7 @@ case $2 in
 	
 	openbor|openbor-6xxx)
 		$xboxkill
-		joycommand="$basicGPI $passthrough $openbor &"
+		joycommand="$basicGPI $dpad $openbor &"
 		eval $joycommand
 	;;
 	
