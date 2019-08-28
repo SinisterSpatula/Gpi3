@@ -57,7 +57,7 @@ scummvm="--ui-buttonmap start=KEY_ENTER,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q
 sorr="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
 
 #Openbor
-openbor="--ui-buttonmap x=void,a=KEY_D,b=KEY_A,Y=KEY_S,lb=KEY_L,rb=KEY_R \
+openbor="--ui-buttonmap x=KEY_F,a=KEY_D,b=KEY_A,Y=KEY_S,lb=KEY_L,rb=KEY_R \
     --ui-buttonmap start=KEY_ENTER,back=KEY_BACKSPACE,back+start=KEY_F10,start+back=KEY_F10"
 
 #gpsp 
