@@ -116,10 +116,12 @@ dosbox="--ui-buttonmap x=KEY_LEFTALT,a=KEY_SPACE,b=KEY_LEFTCTRL,lb=BTN_LEFT,y+lb
 # - SELECT then LEFT - left key (for going through the configs)
 # - SELECT then RIGHT - right key (for going through the configs)
 
-quake3="--ui-buttonmap x=rel:REL_Y:-2:5,b=rel:REL_Y:2:5,y=rel:REL_X:-3:5,a=rel:REL_X:3:5,lb=KEY_LEFTALT:KEY_C:300,rb=BTN_LEFT \
+quake3="--ui-buttonmap x=rel:REL_Y:-9:5,b=rel:REL_Y:9:5,y=rel:REL_X:-12:5,a=rel:REL_X:12:5,lb=KEY_LEFTALT:KEY_C:300,rb=BTN_LEFT \
     --ui-buttonmap start=KEY_ENTER,back=KEY_TAB,lb+rb=KEY_SPACE,back+dl=KEY_LEFT,back+dr=KEY_RIGHT,back+b=KEY_1,back+x=KEY_E \
-    --ui-buttonmap back+y=KEY_LEFTBRACE,back+a=KEY_RIGHTBRACE,lb+x=rel:REL_Y:-4:5,lb+b=rel:REL_Y:4:5,lb+y=rel:REL_X:-6:5 \
-    --ui-buttonmap lb+a=rel:REL_X:6:5,back+start=KEY_ESC,du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
+    --ui-buttonmap back+y=KEY_LEFTBRACE,back+a=KEY_RIGHTBRACE,back+start=KEY_ESC \
+    --ui-buttonmap lb+x=rel:REL_Y:-20:5,lb+b=rel:REL_Y:20:5,lb+y=rel:REL_X:-20:5,lb+a=rel:REL_X:20:5 \
+    --ui-buttonmap x+lb=rel:REL_Y:-20:5,b+lb=rel:REL_Y:20:5,y+lb=rel:REL_X:-20:5,a+lb=rel:REL_X:20:5 \
+    --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_A,dr=KEY_D"
 
 #every map should be using either nograb, passthrough, or a variant of passthrough if swapping buttons around.
 
