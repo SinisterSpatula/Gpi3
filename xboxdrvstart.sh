@@ -27,7 +27,7 @@ echo "rom is "$rom >> /dev/shm/runcommand.log
 
 ### This no longer has dpad as button, use $dpad to add it as needed.
 ### Basic Configuraions - Standard controller mappings 
-basicGPI="sleep 5 && sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
+basicGPI="sleep 3 && sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
     --evdev $joystick \
     --detach-kernel-driver \
     --silent \
