@@ -194,6 +194,11 @@ case $2 in
 		joycommand="$basicGPI $dpad $minecraft &"
 		eval $joycommand
 	;;
+	smw)
+		$xboxkill
+		joycommand="$basicGPI $dpad $smw &"
+		eval $joycommand
+	;;
 	dosbox)
 		case $rom in
 			"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
