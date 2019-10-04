@@ -196,7 +196,7 @@ case $2 in
 	;;
 	smw)
 		$xboxkill
-		joycommand="$basicGPI $dpad $smw &"
+		joycommand="$basicGPI $dpad $smw $nograb &"
 		eval $joycommand
 	;;
 	dosbox)
