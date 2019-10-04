@@ -108,6 +108,10 @@ quake3="--ui-buttonmap x=rel:REL_Y:-2:5,b=rel:REL_Y:2:5,y=rel:REL_X:-3:5,a=rel:R
 
 smw="--ui-buttonmap a=KEY_UP,b=KEY_RIGHTCTRL,x=KEY_SPACE,lb=KEY_LEFTSHIFT,rb=KEY_RIGHTSHIFT,back=KEY_ESC,start=KEY_ENTER"
 
+# TEMPORARY MAPS START HERE
+rott="--ui-buttonmap a=KEY_LEFTCTRL,b=KEY_LEFTALT,x=KEY_ENTER,y=KEY_SPACE,lb=KEY_COMMA,rb=KEY_DOT,start=KEY_ESC \
+    --ui-buttonmap back+start=KEY_TAB,back+b=KEY_CAPSLOCK,back+du=KEY_PAGEUP,back+dd=KEY_PAGEDOWN,back+dl=KEY_COMMA,back+dr=KEY_DOT"
+
 #every map should be using either nograb, passthrough, or a variant of passthrough if swapping buttons around.
 
 #grab is implied unless you use nograb. grab means emulator does not see the physical pad.  nograb means it does.
@@ -196,6 +200,11 @@ case $2 in
 	smw)
 		$xboxkill
 		joycommand="$basicGPI $dpad $smw $nograb &"
+		eval $joycommand
+	;;
+	rott)
+		$xboxkill
+		joycommand="$basicGPI $dpad $rott &"
 		eval $joycommand
 	;;
 	dosbox)
