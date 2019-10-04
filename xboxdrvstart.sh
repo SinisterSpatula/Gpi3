@@ -214,12 +214,42 @@ case $2 in
 		joycommand="$basicGPI $dpad $rott &"
 		eval $joycommand
 	;;
+	chocolate-doom)
+		$xboxkill
+		joycommand="$basicGPI $dpad $chocolate &"
+		eval $joycommand
+	;;
+	chocolate-doom-setup)
+		$xboxkill
+		joycommand="$basicGPI $dpad $chocolate &"
+		eval $joycommand
+	;;
+	chocolate-heretic)
+		$xboxkill
+		joycommand="$basicGPI $dpad $chocolate &"
+		eval $joycommand
+	;;
+	chocolate-heretic-setup)
+		$xboxkill
+		joycommand="$basicGPI $dpad $chocolate &"
+		eval $joycommand
+	;;
 	chocolate-hexen)
 		$xboxkill
 		joycommand="$basicGPI $dpad $chocolate &"
 		eval $joycommand
 	;;
 	chocolate-hexen-setup)
+		$xboxkill
+		joycommand="$basicGPI $dpad $chocolate &"
+		eval $joycommand
+	;;
+	chocolate-strife)
+		$xboxkill
+		joycommand="$basicGPI $dpad $chocolate &"
+		eval $joycommand
+	;;
+	chocolate-strife-setup)
 		$xboxkill
 		joycommand="$basicGPI $dpad $chocolate &"
 		eval $joycommand
