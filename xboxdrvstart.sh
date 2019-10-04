@@ -115,9 +115,9 @@ rott="--ui-buttonmap a=KEY_LEFTCTRL,b=KEY_LEFTSHIFT,x=KEY_ENTER,y=KEY_SPACE,lb=K
     --ui-buttonmap back+start=KEY_TAB,back+du=KEY_PAGEUP,back+dd=KEY_PAGEDOWN,back+dl=KEY_COMMA,back+dr=KEY_DOT"
 
 # todo: just make a separate config updater thing for this and Descent
-chocolate="--ui-buttonmap a=KEY_LEFTCTRL,b=KEY_SPACE,x=KEY_0,y=KEY_9,lb=KEY_COMMA,rb=KEY_DOT,start=KEY_ESC \
-    --ui-buttonmap back+start=KEY_TAB,back+lb=KEY_LEFTBRACE,back+rb=KEY_RIGHTBRACE,back+a=KEY_ENTER \
-    --ui-buttonmap back+du=KEY_PAGEUP,back+dd=KEY_INSERT"
+chocolate="--ui-buttonmap a=KEY_ENTER,b=KEY_SPACE,x=KEY_0,y=KEY_9,lb=KEY_COMMA,rb=KEY_DOT,start=KEY_ESC \
+    --ui-buttonmap back+start=KEY_TAB,back+lb=KEY_LEFTBRACE,back+rb=KEY_RIGHTBRACE,back+a=KEY_BACKSPACE \
+    --ui-buttonmap lb+rb=KEY_LEFTALT,back+du=KEY_PAGEUP,back+dd=KEY_INSERT,back+dl=KEY_COMMA,back+dr=KEY_DOT"
 
 #every map should be using either nograb, passthrough, or a variant of passthrough if swapping buttons around.
 
