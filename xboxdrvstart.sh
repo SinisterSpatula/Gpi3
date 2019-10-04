@@ -109,8 +109,15 @@ quake3="--ui-buttonmap x=rel:REL_Y:-2:5,b=rel:REL_Y:2:5,y=rel:REL_X:-3:5,a=rel:R
 smw="--ui-buttonmap a=KEY_UP,b=KEY_RIGHTCTRL,x=KEY_SPACE,lb=KEY_LEFTSHIFT,rb=KEY_RIGHTSHIFT,back=KEY_ESC,start=KEY_ENTER"
 
 # TEMPORARY MAPS START HERE
+
+# todo: figure out a hotkey for autorun, maybe it just needs a single key
 rott="--ui-buttonmap a=KEY_LEFTCTRL,b=KEY_LEFTSHIFT,x=KEY_ENTER,y=KEY_SPACE,lb=KEY_COMMA,rb=KEY_DOT,start=KEY_ESC \
     --ui-buttonmap back+start=KEY_TAB,back+du=KEY_PAGEUP,back+dd=KEY_PAGEDOWN,back+dl=KEY_COMMA,back+dr=KEY_DOT"
+
+# todo: just make a separate config updater thing for this and Descent
+chocolate="--ui-buttonmap a=KEY_LEFTCTRL,b=KEY_SPACE,x=KEY_0,y=KEY_9,lb=KEY_COMMA,rb=KEY_DOT,start=KEY_ESC \
+    --ui-buttonmap back+start=KEY_TAB,back+lb=KEY_LEFTBRACE,back+rb=KEY_RIGHTBRACE,back+a=KEY_ENTER \
+    --ui-buttonmap back+du=KEY_PAGEUP,back+dd=KEY_INSERT"
 
 #every map should be using either nograb, passthrough, or a variant of passthrough if swapping buttons around.
 
@@ -205,6 +212,16 @@ case $2 in
 	rott)
 		$xboxkill
 		joycommand="$basicGPI $dpad $rott &"
+		eval $joycommand
+	;;
+	chocolate-hexen)
+		$xboxkill
+		joycommand="$basicGPI $dpad $chocolate &"
+		eval $joycommand
+	;;
+	chocolate-hexen-setup)
+		$xboxkill
+		joycommand="$basicGPI $dpad $chocolate &"
 		eval $joycommand
 	;;
 	dosbox)
