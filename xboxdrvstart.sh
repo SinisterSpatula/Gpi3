@@ -99,22 +99,6 @@ dosbox="--ui-buttonmap x=KEY_LEFTALT,a=KEY_SPACE,b=KEY_LEFTCTRL,lb=BTN_LEFT,y+lb
     --ui-buttonmap back=KEY_ESC,back+start=KEY_LEFTCTRL+KEY_F9 \
     --ui-buttonmap du=KEY_UP,y+du=REL_Y:-1:20,dd=KEY_DOWN,y+dd=REL_Y:1:20,dl=KEY_LEFT,y+dl=REL_X:-1:20,dr=KEY_RIGHT,y+dr=REL_X:1:20 \
     --ui-buttonmap y+x=KEY_1,y+a=KEY_ENTER,y+b=KEY_Y"
-    
-
-# Tayle's Orbbotron config (quake3)
-# Basics: D-pad for movement, face buttons for freelook. More specifically, X looks up,
-# B looks down, Y looks left, A looks right. Oh, also the right shoulder button (RB) is
-# mapped to the left mouse button, which means it can be used for the menus, and it shoots,
-# too. On top of that, Select shows the scoreboard, Start uses the inventory item, while pressing
-# both Select and Start brings up the pause menu.
-# - LB - strafe / faster turning / (hold for longer) crouch
-# - LB then RB - jump
-# - SELECT then Y - previous weapon
-# - SELECT then A - next weapon
-# - SELECT then B - swap to the gauntlet
-# - SELECT then X - custom bind (attached to the E key)
-# - SELECT then LEFT - left key (for going through the configs)
-# - SELECT then RIGHT - right key (for going through the configs)
 
 quake3="--ui-buttonmap x=rel:REL_Y:-9:5,b=rel:REL_Y:9:5,y=rel:REL_X:-12:5,a=rel:REL_X:12:5,lb=KEY_LEFTALT:KEY_C:300,rb=BTN_LEFT \
     --ui-buttonmap start=KEY_ENTER,back=KEY_TAB,lb+rb=KEY_SPACE,back+dl=KEY_LEFT,back+dr=KEY_RIGHT,back+b=KEY_1,back+x=KEY_E \
@@ -122,6 +106,8 @@ quake3="--ui-buttonmap x=rel:REL_Y:-9:5,b=rel:REL_Y:9:5,y=rel:REL_X:-12:5,a=rel:
     --ui-buttonmap lb+x=rel:REL_Y:-20:5,lb+b=rel:REL_Y:20:5,lb+y=rel:REL_X:-20:5,lb+a=rel:REL_X:20:5 \
     --ui-buttonmap x+lb=rel:REL_Y:-20:5,b+lb=rel:REL_Y:20:5,y+lb=rel:REL_X:-20:5,a+lb=rel:REL_X:20:5 \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_A,dr=KEY_D"
+
+smw="--ui-buttonmap a=KEY_UP,b=KEY_RIGHTCTRL,x=KEY_SPACE,lb=KEY_LEFTSHIFT,rb=KEY_RIGHTSHIFT,back=KEY_ESC,start=KEY_ENTER"
 
 #every map should be using either nograb, passthrough, or a variant of passthrough if swapping buttons around.
 
