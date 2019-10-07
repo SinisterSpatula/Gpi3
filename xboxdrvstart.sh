@@ -48,10 +48,9 @@ basicGPI="sleep 3 && sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 #Outrun Engine - select+start=quit.
 cannonball="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
 
-#Scummvm Standalone - select+start=quit, select+LB=Load State, select+RB=Save State.
+#Scummvm Standalone - select+start=quit
 #Select send N for No.  Start sends Enter. Select+X=Keyboard "7"
-scummvm="--ui-buttonmap start=KEY_ENTER,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q,back+lb=KEY_LEFTCTRL+KEY_0 \
-	--ui-buttonmap back+rb=KEY_LEFTALT+KEY_0,back+x=KEY_7,start+back=KEY_LEFTCTRL+KEY_Q"
+scummvm="--ui-buttonmap start=KEY_ENTER,back=KEY_N,back+start=KEY_LEFTCTRL+KEY_Q,start+back=KEY_LEFTCTRL+KEY_Q,back+x=KEY_7"
 
 #Streets of Rage remake
 sorr="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
@@ -74,7 +73,8 @@ mame4all="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC,y+lb=KEY_TAB,y+rb
 #Not needed.  You should configure it's controls within it's UI, use start+select as UI Cancel.
 
 #pifba
-pifba="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
+pifba="--ui-buttonmap b=KEY_LEFTCTRL,y=KEY_SPACE,a=KEY_LEFTALT,x=KEY_LEFTSHIFT,lb=KEY_Z,rb=KEY_X \
+    --ui-buttonmap start=KEY_ENTER,back=KEY_TAB,back+start=KEY_ESC,start+back=KEY_ESC"
 
 #fbacapcom alternate map for capcom fighting games
 fbacapcom="--ui-buttonmap b=KEY_LEFTSHIFT,y=KEY_LEFTCTRL,a=KEY_Z,x=KEY_LEFTALT,lb=KEY_SPACE,rb=KEY_X \
@@ -84,7 +84,7 @@ daphne="--ui-buttonmap x=KEY_LEFTSHIFT,a=KEY_LEFTALT,b=KEY_LEFTCTRL \
         --ui-buttonmap start=KEY_1,back=KEY_5,back+start=KEY_ESC"
 
 pcsx="--ui-buttonmap x=KEY_D,a=KEY_X,b=KEY_Z+KEY_ENTER,Y=KEY_S,lb=KEY_W,y+lb=KEY_E,rb=KEY_R,y+rb=KEY_T,start=KEY_V,back=KEY_C, \
-    --ui-buttonmap back+x=KEY_ESC,back+start=exec:/opt/retropie/supplementary/xboxdrv/bin/quit.sh,back+lb=KEY_F2,back+rb=KEY_F1"
+    --ui-buttonmap back+x=KEY_ESC,back+start=exec:/opt/retropie/supplementary/xboxdrv/bin/quit.sh,start+back=exec:/opt/retropie/supplementary/xboxdrv/bin/quit.sh,back+lb=KEY_F2,back+rb=KEY_F1"
 
 eduke32="--ui-buttonmap x=KEY_RIGHTCTRL,a=KEY_E,b=KEY_SPACE,y=KEY_LEFTSHIFT,lb=KEY_A,rb=KEY_D,a+lb=KEY_SEMICOLON,a+rb=KEY_APOSTROPHE,lb+rb=KEY_LEFTCTRL,rb+lb=KEY_LEFTCTRL \
     --ui-buttonmap start=KEY_ENTER+KEY_M,back=KEY_ESC,back+start=KEY_F10 \
