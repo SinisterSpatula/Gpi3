@@ -108,6 +108,20 @@ quake3="--ui-buttonmap x=rel:REL_Y:-2:5,b=rel:REL_Y:2:5,y=rel:REL_X:-3:5,a=rel:R
 
 smw="--ui-buttonmap a=KEY_UP,b=KEY_RIGHTCTRL,x=KEY_SPACE,lb=KEY_LEFTSHIFT,rb=KEY_RIGHTSHIFT,back=KEY_ESC,start=KEY_ENTER"
 
+#
+# BRAND NEW BUTTONS LAYOUTS FROM THIS POINT ON
+# (I might write a script that lets people change those on the fly, but no promises)
+#
+
+# EDuke32 (simplified everything, separate button for the Mighty Boot, view centering, buttons to zoom the map in and out)
+eduke32tayle="--ui-buttonmap du=KEY_UP+KEY_W,dd=KEY_DOWN+KEY_S,dl=KEY_LEFT,dr=KEY_RIGHT,lb=KEY_A,rb=KEY_D \
+	--ui-buttonmap a=KEY_RIGHTCTRL,y=KEY_E,x=KEY_Q,b=KEY_SPACE,start=KEY_ENTER \
+	--ui-buttonmap back+start=KEY_ESC,back+b=KEY_TAB,back+y=KEY_MINUS,back+x=KEY_EQUAL,back+du=KEY_APOSTROPHE,back+dd=KEY_SEMICOLON,back+dl=KEY_LEFTBRACE,back+dr=KEY_RIGHTBRACE,lb+rb=KEY_LEFTCTRL+KEY_KP5,rb+lb=KEY_LEFTCTRL+KEY_KP5,y+du=KEY_HOME,y+dd=KEY_END"
+
+# PCSX-ReARMed (L2 is now Select+L, R2 is now Select+R, Select is now Select+Start to avoid input conflicts)
+pcsxtayle="--ui-buttonmap x=KEY_D,a=KEY_X,b=KEY_Z+KEY_ENTER,Y=KEY_S,lb=KEY_W,back+lb=KEY_E,rb=KEY_R,back+rb=KEY_T,start=KEY_V,back+start=KEY_C, \
+    --ui-buttonmap back+x=KEY_ESC,start+lb=KEY_F1,start+rb=KEY_F2"
+
 # TEMPORARY MAPS START HERE
 
 # todo: figure out a hotkey for autorun, maybe it just needs a single key
@@ -191,12 +205,12 @@ case $2 in
 	;;
 	pcsx-rearmed)
 		$xboxkill
-		joycommand="$basicGPI $dpad $pcsx &"
+		joycommand="$basicGPI $dpad $pcsxtayle &"
 		eval $joycommand
 	;;
 	eduke32)
 		$xboxkill
-		joycommand="$basicGPI $dpad $eduke32 &"
+		joycommand="$basicGPI $dpad $eduke32tayle &"
 		eval $joycommand
 	;;
 	minecraft)
@@ -214,42 +228,7 @@ case $2 in
 		joycommand="$basicGPI $dpad $rott &"
 		eval $joycommand
 	;;
-	chocolate-doom)
-		$xboxkill
-		joycommand="$basicGPI $dpad $chocolate &"
-		eval $joycommand
-	;;
-	chocolate-doom-setup)
-		$xboxkill
-		joycommand="$basicGPI $dpad $chocolate &"
-		eval $joycommand
-	;;
-	chocolate-heretic)
-		$xboxkill
-		joycommand="$basicGPI $dpad $chocolate &"
-		eval $joycommand
-	;;
-	chocolate-heretic-setup)
-		$xboxkill
-		joycommand="$basicGPI $dpad $chocolate &"
-		eval $joycommand
-	;;
-	chocolate-hexen)
-		$xboxkill
-		joycommand="$basicGPI $dpad $chocolate &"
-		eval $joycommand
-	;;
-	chocolate-hexen-setup)
-		$xboxkill
-		joycommand="$basicGPI $dpad $chocolate &"
-		eval $joycommand
-	;;
-	chocolate-strife)
-		$xboxkill
-		joycommand="$basicGPI $dpad $chocolate &"
-		eval $joycommand
-	;;
-	chocolate-strife-setup)
+	chocolate-doom|chocolate-doom-setup|chocolate-heretic|chocolate-heretic-setup|chocolate-hexen|chocolate-hexen-setup|chocolate-strife|chocolate-strife-setup)
 		$xboxkill
 		joycommand="$basicGPI $dpad $chocolate &"
 		eval $joycommand
