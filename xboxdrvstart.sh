@@ -68,7 +68,8 @@ gpsp="--ui-buttonmap x=KEY_S,a=KEY_Z,b=KEY_X,lb=KEY_A,Y=KEY_A,rb=KEY_S \
 pico8="--ui-buttonmap back+start=KEY_LEFTCTRL+KEY_Q,start+back=KEY_LEFTCTRL+KEY_Q"
 
 #mame4all
-mame4all="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC,y+lb=KEY_TAB,y+rb=KEY_ENTER"
+mame4all="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC,y+lb=KEY_TAB,y+rb=KEY_ENTER \
+          --ui-buttonmap start=KEY_1,back=KEY_5"
 
 #advmame0-94
 #Not needed.  You should configure it's controls within it's UI, use start+select as UI Cancel.
@@ -185,7 +186,7 @@ case $2 in
 	;;
 	mame4all)
 		$xboxkill
-		joycommand="$basicGPI $nograb $mame4all &"
+		joycommand="$basicGPI $nograb $dpad $mame4all &"
 		eval $joycommand
 	;;
 	daphne)
