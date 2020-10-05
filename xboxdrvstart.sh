@@ -75,10 +75,7 @@ mame4all="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC,y+lb=KEY_TAB,y+rb
 #Not needed.  You should configure it's controls within it's UI, use start+select as UI Cancel.
 
 #pifba
-pifba="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC \
-       --ui-buttonmap back=KEY_TAB,start=KEY_ENTER \
-       --ui-buttonmap lb=KEY_Z,rb=KEY_X \
-       --ui-buttonmap y=KEY_LEFTCTRL,x=KEY_LEFTALT,a=KEY_SPACE,b=KEY_LEFTSHIFT"
+pifba="--ui-buttonmap back+start=KEY_ESC,start+back=KEY_ESC"
 
 #fbacapcom alternate map for capcom fighting games
 fbacapcom="--ui-buttonmap b=KEY_LEFTSHIFT,y=KEY_LEFTCTRL,a=KEY_Z,x=KEY_LEFTALT,lb=KEY_SPACE,rb=KEY_X \
@@ -240,7 +237,7 @@ case $2 in
 			;;
 			*) # Configuration for every other ROMs on this emulator
 				$xboxkill
-				joycommand="$basicGPI $dpad $pifba &"
+				joycommand="$basicGPI $nograb $pifba &"
 				eval $joycommand
 			;;
 		esac
