@@ -141,9 +141,10 @@ dpad="--dpad-as-button \
 xboxkill="sudo killall xboxdrv > /dev/null 2>&1"
 
 ### Daemonize xboxdrv with background disown, saves 2MB runtime when sudo exits
-### NB: should replace sleep 3 with loop that waits for joy2key.sh to finish
+### NB: don't launch until joy2key.py exits otherwise it conflicts with the launcher menu
+### NB: the [] trick is because runcommand also uses pgrep and would match on us
 function daemonize {
-	sudo -b bash -c "sleep 3 ; $* & disown %1"
+	sudo -b bash -c "sleep 5 ; while pgrep joy[2]key.py ; do sleep 1 ; done ; $* & disown %1"
 }
 
 ### Execute the driver with the configuration you need
