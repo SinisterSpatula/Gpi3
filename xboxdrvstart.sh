@@ -26,8 +26,8 @@ echo "rom is "$rom >> /dev/shm/runcommand.log
 
 
 ### This no longer has dpad as button, use $dpad to add it as needed.
-### Basic Configuraions - Standard controller mappings 
-basicGPI="sleep 3 && sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
+### Basic Configurations - Standard controller mappings 
+basicGPI="/opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
     --evdev $joystick \
     --detach-kernel-driver \
     --silent \
@@ -40,7 +40,6 @@ basicGPI="sleep 3 && sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
     --evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_RX=x2,ABS_RY=y2,ABS_Z=lt,ABS_RZ=rt \
     --evdev-keymap BTN_SOUTH=a,BTN_EAST=b,BTN_NORTH=x,BTN_WEST=y,BTN_TL=lb,BTN_TR=rb \
     --evdev-keymap BTN_THUMBL=tl,BTN_THUMBR=tr,BTN_MODE=guide,BTN_SELECT=back,BTN_START=start"
-
 
 ### Extended Configurations
 ### Specific emulator configuration or any other parameters you will need only for some emulators
@@ -141,90 +140,81 @@ dpad="--dpad-as-button \
 ### Kill Command
 xboxkill="sudo killall xboxdrv > /dev/null 2>&1"
 
+### Daemonize xboxdrv with background disown, saves 2MB runtime when sudo exits
+### NB: should replace sleep 3 with loop that waits for joy2key.sh to finish
+function daemonize {
+	sudo -b bash -c "sleep 3 ; $* & disown %1"
+}
+
 ### Execute the driver with the configuration you need
 # $2 is the name of the core
 case $2 in
 
 	cannonball)
 		$xboxkill
-		joycommand="$basicGPI $nograb $cannonball &"
-		eval $joycommand
+		daemonize $basicGPI $nograb $cannonball
 	;;
 
 	scummvm)
 		$xboxkill
-		joycommand="$basicGPI $nograb $scummvm &"
-		eval $joycommand
+		daemonize $basicGPI $nograb $scummvm
 	;;
 	
 	sorr)
 		$xboxkill
-		joycommand="$basicGPI $nograb $sorr &"
-		eval $joycommand
+		daemonize $basicGPI $nograb $sorr
 	;;
 	
 	openbor|openbor-6xxx)
 		$xboxkill
-		joycommand="$basicGPI $dpad $openbor &"
-		eval $joycommand
+		daemonize $basicGPI $dpad $openbor
 	;;
 	
 	gpsp)
 		$xboxkill
-		joycommand="$basicGPI $dpad $gpsp &"
-		eval $joycommand
+		daemonize $basicGPI $dpad $gpsp
 	;;
 	quake3)
 		$xboxkill
-		joycommand="$basicGPI $dpad $quake3 &"
-		eval $joycommand
+		daemonize $basicGPI $dpad $quake3
 	;;
 	pico8|splore)
 		$xboxkill
-		joycommand="$basicGPI $nograb $pico8 &"
-		eval $joycommand
+		daemonize $basicGPI $nograb $pico8
 	;;
 	mame4all)
 		$xboxkill
-		joycommand="$basicGPI $nograb $dpad $mame4all &"
-		eval $joycommand
+		daemonize $basicGPI $nograb $dpad $mame4all
 	;;
 	daphne)
 		$xboxkill
-		joycommand="$basicGPI $dpad $daphne &"
-		eval $joycommand
+		daemonize $basicGPI $dpad $daphne
 	;;
 	pcsx-rearmed)
 		$xboxkill
-		joycommand="$basicGPI $dpad $pcsxtayle &"
-		eval $joycommand
+		daemonize $basicGPI $dpad $pcsxtayle
 	;;
 	eduke32)
 		$xboxkill
-		joycommand="$basicGPI $dpad $eduke32tayle &"
-		eval $joycommand
+		daemonize $basicGPI $dpad $eduke32tayle
 	;;
 	minecraft)
 		$xboxkill
-		joycommand="$basicGPI $dpad $minecraft &"
-		eval $joycommand
+		daemonize $basicGPI $dpad $minecraft
 	;;
 	smw)
 		$xboxkill
-		joycommand="$basicGPI $dpad $smw $nograb &"
-		eval $joycommand
+		daemonize $basicGPI $dpad $smw $nograb
 	;;
 	dosbox)
 		case $rom in
 			"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
 				$xboxkill
-				joycommand="$basicGPI $dpad $dosbox &"
-				eval $joycommand
+				daemonize $basicGPI $dpad $dosbox
 			;;
 			*) # Configuration for every other ROMs on this emulator
 				$xboxkill
-				joycommand="$basicGPI $dpad $dosbox &"
-				eval $joycommand
+				daemonize $basicGPI $dpad $dosbox
 			;;
 		esac
 	;;
@@ -232,13 +222,11 @@ case $2 in
 		case $rom in
 			"cybots.zip"|"dstlk.zip"|"hsf2.zip"|"hsf2j.zip"|"msh.zip"|"mshvsf.zip"|"mshvsfj.zip"|"mvsc.zip"|"mvscu.zip"|"nwarr.zip"|"sfa2.zip"|"sfa3.zip"|"sfa.zip"|"sfz3jr1.zip"|"sf2ce.zip"|"sf2hf.zip"|"sf2rb.zip"|"sf2.zip"|"sgemf.zip"|"ssf2t.zip"|"ssf2.zip"|"vhunt2.zip"|"vsav2.zip"|"vsav.zip"|"xmvsf.zip"|"xmcota.zip") # Configuration used only for these ROMs
 				$xboxkill
-				joycommand="$basicGPI $dpad $fbacapcom &"
-				eval $joycommand
+				daemonize $basicGPI $dpad $fbacapcom
 			;;
 			*) # Configuration for every other ROMs on this emulator
 				$xboxkill
-				joycommand="$basicGPI $nograb $pifba &"
-				eval $joycommand
+				daemonize $basicGPI $nograb $pifba
 			;;
 		esac
 	;;
