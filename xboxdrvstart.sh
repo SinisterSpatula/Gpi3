@@ -37,9 +37,14 @@ basicGPI="/opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
     --mimic-xpad \
     --trigger-as-button \
     --no-extra-events \
-    --evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_RX=x2,ABS_RY=y2,ABS_Z=lt,ABS_RZ=rt \
+    --evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_RX=x2,ABS_RY=y2,ABS_Z=lt,ABS_RZ=rt,ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y \
+    --evdev-keymap BTN_DPAD_DOWN=dd,BTN_DPAD_UP=du,BTN_DPAD_LEFT=dl,BTN_DPAD_RIGHT=dr \
     --evdev-keymap BTN_SOUTH=a,BTN_EAST=b,BTN_NORTH=x,BTN_WEST=y,BTN_TL=lb,BTN_TR=rb \
     --evdev-keymap BTN_THUMBL=tl,BTN_THUMBR=tr,BTN_MODE=guide,BTN_SELECT=back,BTN_START=start"
+
+### Line unedited due to how the D-pad was mapped to an analog stick for the most retarded of reasons
+### Many thanks to gtaforever00 for pointing this out, makes the GPi2 a bit more viable -- Tayle
+### --evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_RX=x2,ABS_RY=y2,ABS_Z=lt,ABS_RZ=rt \
 
 ### Extended Configurations
 ### Specific emulator configuration or any other parameters you will need only for some emulators
